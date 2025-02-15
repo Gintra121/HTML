@@ -161,25 +161,25 @@ header .clicked{
     cursor:pointer;
     transition: 0.5s;
 }
-/* generate keyframe appear */
-@keyframes appear{
-    from{
-        opacity:0;
-        scale:0;
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
     }
-    to{
-        opacity:1;
-        scale:1;
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
-.back .box-wrap{
-    display:flex;
+
+.back .box-wrap {
+    display: flex;
     align-self: center;
-    justify-content:center;
-    flex:wrap;
-   
+    justify-content: center;
+    flex-wrap: wrap;
 }
-.back .box-wrap .block{
+
+.back .box-wrap .block {
     width: 300px;
     height: 350px;
     background: rgb(255, 255, 255);
@@ -187,41 +187,47 @@ header .clicked{
     border-radius: 10px;
     margin: 20px;
     cursor: pointer;
-    position:relative;
+    position: relative;
     z-index: 1;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added box-shadow */
-    animation:appear 1.5s linear;
-    animation-timeline: 10;
-    transition: 0.5s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
 }
-.back .box-wrap .block i{
-    height:60px;
-    width:60px;
+
+.back .box-wrap .block.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.back .box-wrap .block i {
+    height: 60px;
+    width: 60px;
     line-height: 60px;
-    text-align:center;
-    border-radius:50%;
-    color:#fff;
-    background:rgb(98, 0, 255);
+    text-align: center;
+    border-radius: 50%;
+    color: #fff;
+    background: rgb(98, 0, 255);
     transition: 2s;
-    font-size:30px;
-    margin-top:10px;
-    animation:appear 1.5s linear;
-    animation-timeline: 10;
+    font-size: 30px;
+    margin-top: 10px;
 }
-.back .box-wrap .block h3{
-    font-size:15px;
-    color:rgb(0, 0, 0);
-    margin-top:10px;
-    transition: 0.5s;
+
+.back .box-wrap .block h3 {
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+    margin-top: 10px;
+    transition: 1.5s;
 }
-.back .box-wrap .block p{
-    height:auto;
-    width:100%;
-    font-size:13px;
-    color:rgb(0, 0, 0);
-    margin-top:10px;
-    transition: 0.5s;
-    position:absolute;
+
+.back .box-wrap .block p {
+    height: auto;
+    width: 100%;
+    font-size: 13px;
+    color: rgb(0, 0, 0);
+    margin-top: 10px;
+    transition: 1.5s;
+    position: absolute;
 }
 
 @media(max-width:768px){
@@ -272,15 +278,5 @@ header .clicked{
         transition: 0.5s;
         transform: scale(1.1);
         width:50%;
-    }
-}
-@keyframes appear{
-    from{
-        opacity:0;
-        scale:0;
-    }
-    to{
-        opacity:1;
-        scale:1;
     }
 }

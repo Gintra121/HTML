@@ -14,3 +14,20 @@ $(document).ready(function(){
     });
 
 });
+document.addEventListener('DOMContentLoaded', function () {
+    const blocks = document.querySelectorAll('.box-wrap .block');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            } else {
+                entry.target.classList.remove('visible');
+            }
+        });
+    });
+
+    blocks.forEach(block => {
+        observer.observe(block);
+    });
+});
