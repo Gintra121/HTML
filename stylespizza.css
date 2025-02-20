@@ -1,0 +1,192 @@
+*{
+  padding:0px;
+  margin:0px;
+  box-sizing: border-box;
+ }
+.menu {
+  /* position: fixed;
+  z-index:1000; */
+  width:100%;
+  height:70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 140%;
+  background-color: rgb(247, 244, 244);
+ 
+  /* /make this stay on top of everything */
+
+  /* z-index: 10; កំណត់លំដាប់ឲ្យនៅមុខឬនៅក្រោយ */
+}
+.section{
+  position: fixed;
+  z-index:1000;
+  width:100%;
+}
+.menuL a {
+  text-decoration: none;
+  color: black;
+  margin-right: 30px;
+  /* padding-right: uppercase; */
+  text-transform: uppercase;
+}
+
+.menuL a:hover {
+  background-color: rgb(74, 71, 71);
+}
+
+.menuL a i {
+  margin-right: 10px;
+}
+
+.menuR i {
+  padding: 10px;
+}
+
+.menuR i:hover {
+  background-color: red;
+
+}
+
+.imgbg {
+  position: relative;
+  /* position: relative;​ កំណត់ទីតាំង objet ឲ្យមកកណ្ដាល */
+  background-image: url("pic/df977b90-193d-49d4-a59d-8dd922bcbf65.avif");
+  /* background-image: url("../photo/parallax1.jpg"); សម្រាប់ដាក់រូបភាពពីកន្លែងផ្សេង */
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+}
+
+
+.container {
+  position: relative;
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 20px;
+  top:30vh;
+  align-items: center;
+}
+
+.title-section {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.title-section h1 {
+  font-size: 2.5rem;
+  color: #e74c3c;
+  margin-bottom: 10px;
+}
+
+.title-section p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* .menu {
+  text-align-last: center;
+  color: red;
+} */
+
+.menu h2 {
+  font-size: 2rem;
+  color: #e74c3c;
+  text-align: center;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.pizza-grid {
+  display: flex;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+.pizza-gridR{
+  display: flex;
+  grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
+  gap: 20px;
+
+}
+.pizza{
+  text-align: center;
+  height:55px;
+  background-color: #f1dcd9;
+}
+.pizza-item {
+  background-color: #fff;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.pizza-item:hover {
+  transform: translateY(-10px);
+}
+
+.pizza-item img {
+  width: 100%;
+  border-radius: 20px;
+  margin-bottom: 15px;
+}
+
+.pizza-item h3 {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.pizza-item p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.pizza-item .price {
+  font-size: 1.5rem;
+  color: #e74c3c;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.order-button {
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.order-button:hover {
+  background-color: #c0392b;
+}
+
+/* Contact Section */
+.contact-section {
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+   top:30vh;
+}
+
+.contact-section h2 {
+  font-size: 2rem;
+  color: #e74c3c;
+  margin-bottom: 20px;
+}
+
+.contact-section p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 10px;
+  
+}

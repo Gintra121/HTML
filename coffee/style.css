@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body {
+    background: #f2e1ca;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Sections */
+section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-size: 24px;
+    color: #543724;
+    margin-bottom: 10px;
+    font-style: italic;
+    line-height: 15px;
+}
+h2:hover {
+    color: #04585a;
+}
+
+p {
+    color: #677474;
+    margin-bottom: 15px;
+    line-height: 25px;
+    font-style: italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+p:hover{
+    color: rgb(89, 203, 198);
+    transition: 1s ;
+}
+
+/* Category Section */
+.category-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.category-card {
+    position: relative;
+    width: 250px;
+    height: 150px;
+}
+
+.category-card img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    font-family:  sans-serif;
+    font-style:oblique;
+}
+
+.overlay button {
+    margin-top: 5px;
+    padding: 5px 10px;
+    border: none;
+    background: transparent;
+    color: rgb(214, 191, 191);
+    cursor: pointer;
+}
+
+/* Milkshakes Section */
+.shake-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.shake-card {
+    background: #d2b69e;
+    padding: 15px;
+    border-radius: 10px;
+    width: 180px;
+    text-align: center;
+}
+.shake-card:hover {
+    background: #a27751;
+}
+
+.shake-card img {
+    width: 20%;
+    /* height: 100px; */
+}
+
+.shake-card button {
+    background: #6b4e3d;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.shake-card button:hover {
+    background: #6e5313;
+    color: rgb(195, 232, 242);
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Blog Section */
+.blog-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.blog-container p{
+    font-size: small;
+}
+.blog-card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+}
+
+.blog-card img {
+    width: 100%;
+    height: 120px;
+    border-radius: 10px;
+}
+
+.blog-card button {
+    background: #3d2b1f;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.blog-card button:hover {
+    background: #9f4978;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+/* Footer */
+footer {
+    background: rgb(53, 48, 48);
+    color: white;
+    padding: 20px;
+}
+footer:hover {
+    background: rgb(165, 168, 152);
+    padding: 20px;
+
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    text-align: center;
+}

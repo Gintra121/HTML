@@ -1,0 +1,139 @@
+.mydiv{
+    position: relative;
+    display: flex;
+    margin:5px;
+    gap: lrem;
+}
+.bg1{
+    background-color:white;
+    width: 25%;
+    color: black;
+    height: 465px;
+    text-align: center;
+    margin-right: 5px;
+    margin-left: 10px;
+    margin: 5px;
+    cursor: pointer;
+    transition: opacity 0.6s ease;
+}
+.bg2{
+    background-color: white;
+    width: 25%;
+    color: black;
+    height: 465px;
+    text-align: center;
+    margin-right: 10px;
+    margin: 5px;
+    cursor: pointer;
+    transition: opacity 0.6s ease;
+}
+.bg3{
+    background-color: white;
+    width: 25%;
+    color: black;
+    height: 465px;
+    text-align: center;
+    margin-right: 10px;
+    margin: 5px;
+    cursor: pointer;
+    transition: opacity 0.6s ease;
+}
+.bg4{
+    background-color: white;
+    width: 25%;
+    color: black;
+    height: 465px;
+    text-align: center;
+    margin-right: 10px;
+    margin: 5px;
+    cursor: pointer;
+    transition: opacity 0.6s ease;
+}
+.p{
+    color: rgba(28, 26, 26, 0.792);
+    font-size: 15px;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+.h1{
+    color: rgba(0, 0, 0, 0.646);
+    font-size: 20px;
+
+}
+.bgcl{
+    background-color: white;
+    width:250px;
+}
+.bg1 img{
+    margin-top: 20px;
+    
+    border-color: white;
+    width: 200px;
+    cursor: pointer;
+    transition: all 0.6s ease;
+}
+.bg1 img:hover{
+    transform: scale(1.2);
+}
+
+.button{
+    background-color:black;
+    border: 0cap;
+    height: 25px;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: opacity 0.6s ease;
+}
+.button:hover{
+    transform: scale(1.1);
+}
+
+
+.endl{
+    position: relative;
+    
+    background-color: antiquewhite;
+    margin-top: 50px;
+}
+.s{
+    position: relative;
+    justify-content: space-around;
+    display: flex;
+    font-size: 150%;
+    font-weight: 400;
+    padding-top: 25px;
+    line-height: 50px;
+}
+.p1{
+    color: rgba(28, 26, 26, 0.792);
+    font-size: 15px;
+    margin-left: 3px;
+    margin-right: 3px;
+    background-color: white;
+    width: 50%;
+    height: 150px;
+}
+.p1 img{
+    width: 100px;
+    margin: 50px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.icon i{
+    color: darkgrey;
+    padding-right: 5px;
+    
+}
+.icon a{
+    text-decoration: none;
+    color: black;
+    font-size: 70%;
+}
+.icon1 i{
+    color: rgba(21, 3, 125, 0.315);
+    padding-right: 15px;
+    
