@@ -15,7 +15,6 @@ $(document).ready(function(){
 
 });
 
-// for disappeared and appera when scroll
 document.addEventListener("DOMContentLoaded", function () {
   const blocks = document.querySelectorAll(".box-wrap .block");
 

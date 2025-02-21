@@ -1,34 +1,62 @@
 <!DOCTYPE html>
 <html lang="km">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ហាងលក់ Pizza</title>
   <link rel="stylesheet" href="stylespizza.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+      $(document).ready(function(){
+        $('.click').click(function(){
+            $(this).toggleClass('.clicked');
+            $('.navblock').toggleClass('nav-toggle');
+        });
+        $(window).on('scroll', function(){
+            $('.click').removeClass('.clicked');
+            $('.navblock').removeClass('nav-toggle');
+            if($(window).scrollTop()>30){
+                $('header').addClass('header-online');
+            } else{
+                $('header').removeClass('header-online');
+            }
+        });
+      
+      });
+    </script>
 </head>
-<body>
-   
-   <section class="section">
-  <div class="menu">
-    <div class="menuL">
-        <a herf=""><i class="fa-solid fa-house-chimney"></i>Home</a> 
-        <a herf=""><i class="fa-solid fa-bars"></i>Menu</a> 
-          
-    </div>
 
-    <div><a href="menuR"><i class="fa-solid fa-magnifying-glass"></i></a></div>
-     
-  </div>
-</section>
+<body>
+  <header>
+    <a href="" class="logo"><i class="fa-solid fa-cart-shopping"></i>Drink</a>
+    <nav class="navblock">
+      <ul>
+        <li><a href="../index.html#back">Home</a></li>
+        <li><a href="../About Us/about.html">About Us</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+        <li><a href="../index.html#product">Product</a></li>
+        <li><a href="../login/login.html">Account</a></li>
+      </ul>
+    </nav>
+    <div class="click">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  </header>
+
 
   <div class="imgbg">
-      <div class="imgbgtext">
-          </div>
+    <div class="imgbgtext">
+    </div>
   </div>
-   <div class="pizza">
+  <div class="pizza">
     <h1>Menu Pizza</h1>
-   </div>
+  </div>
   <div class="container">
     <div class="menu">
       <div class="pizza-grid">
@@ -39,16 +67,16 @@
           <p class="price">$8.99</p>
           <button class="order-button">កម្មង់ឥឡូវ</button>
         </div>
-        
-         <div class="pizza-item">
+
+        <div class="pizza-item">
           <img src="pic/IMG_0035.JPG" alt="Pizza Pepperoni">
           <h3>Pizza Pepperoni</h3>
           <p>Pepperoni សាច់ជ្រូក និងឈីស mozzarella។</p>
           <p class="price">$9.99</p>
           <button class="order-button">កម្មង់ឥឡូវ</button>
         </div>
-        
-          <div class="pizza-item">
+
+        <div class="pizza-item">
           <img src="pic/IMG_0036.JPG" alt="Pizza Vegetarian">
           <h3>Pizza Vegetarian</h3>
           <p>បន្លែស្រស់ និងឈីស mozzarella</p>
@@ -72,23 +100,24 @@
           <button class="order-button">កម្មង់ឥឡូវ</button>
         </div>
 
-        
-          
-           
-          
-           
-</div>
-   </div>
 
-    
-   <div class="contact-section">
-    <br><br><br><br>
-   <h2>ទំនាក់ទំនងយើងខ្ញុំ</h2>
-   <p>អាសយដ្ឋាន: ផ្លូវ 12, បាត់ដំបង</p>
-   <p>ទូរស័ព្ទ: 012 345 678</p>
-   <p>អ៊ីមែល: satyaching2@gmail.com</p>  
+
+
+
+
+      </div>
+    </div>
+
+
+    <div class="contact-section">
+      <br><br><br><br>
+      <h2>ទំនាក់ទំនងយើងខ្ញុំ</h2>
+      <p>អាសយដ្ឋាន: ផ្លូវ 12, បាត់ដំបង</p>
+      <p>ទូរស័ព្ទ: 012 345 678</p>
+      <p>អ៊ីមែល: satyaching2@gmail.com</p>
+    </div>
   </div>
-</div> 
 
 </body>
+
 </html>

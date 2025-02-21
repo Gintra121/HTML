@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="menustyle.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+      $(document).ready(function(){
+        $('.click').click(function(){
+            $(this).toggleClass('.clicked');
+            $('.navblock').toggleClass('nav-toggle');
+        });
+        $(window).on('scroll', function(){
+            $('.click').removeClass('.clicked');
+            $('.navblock').removeClass('nav-toggle');
+            if($(window).scrollTop()>30){
+                $('header').addClass('header-online');
+            } else{
+                $('header').removeClass('header-online');
+            }
+        });
+      
+      });
+    </script>
+</head>
+<body>
+  <header>
+    <a href="" class="logo"><i class="fa-solid fa-cart-shopping"></i>Drink</a>
+    <nav class="navblock">
+        <ul>
+            <li><a href="../index.html#back">Home</a></li>
+            <li><a href="../About Us/about.html">About Us</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+            <li><a href="../index.html#product">Product</a></li>
+            <li><a href="../login/login.html">Account</a></li>
+        </ul>
+    </nav>
+    <div class="click">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+</header>
+  <div class="menu">
+    <div class="menuL">
+       <div class="carousel-item active">
+           <div class="blog-post">
+            <img src="https://i.pinimg.com/736x/22/32/c9/2232c9877cf0a729b26260907b4e7b36.jpg" alt="Blog Image">
+               <div class="post-content">
+                   <h1 style="color: rgb(0, 35, 118);"><i class="fa-solid fa-user"></i>The MH CUPCAKES</h1>
+           <img class="d-block w-100" src="57f94562303ad4df41db4db1f48d0bef.jpg" alt="First slide">
+           <img class="d-block w-100" src="8a4526d383d017225fd5354dc6932e5f.jpg" alt="First slide">
+         </div>
+                <button>Find Out »</button>
+           </div>
+       </div>
+       </div>
+   </div>
+   <div class="sidebar">
+       <div class="profile">
+           <img src="https://i.pinimg.com/736x/6d/2a/4f/6d2a4f93ff1449c76dbaa86b7e70561f.jpg" alt="Profile Image">
+           <h3>Menu</h3>
+       </div>
+       
+       <div class="popular-posts">
+           <h3>You want it you buy it...!</h3>
+           <ul>
+             <tr>
+               <td width="25%" bgcolor="f1f1f1">
+                 <h1>Dounts</h1>
+                 <li><img src="2c485dfab199deb0b6bbf06cc648e235.jpg" alt=""width="300"> <span>2.5$</span></li> 
+               </td>
+               <td width="25%" bgcolor="f11f1f1">
+                 <li><img src="7abd07f220fa77e40c0f0f0bb4273571.jpg" alt=""width="300"> <span>2.5$</span></li>
+                 <p></p>
+               </td>
+               <td width="25%" bgcolor="f11f1f1">
+                 <li><img src="460360b7e540e94ab5636223ca456a35.jpg" alt=""width="300"> <span>buy10free2</span></li>
+                 <h1>Strawberry Chocolate Croissant</h1>
+                 <p></p>
+               </td>
+               <td width="25%" bgcolor="f11f1f1">
+                 <li><img src="3a47398ed3cb129a575b1a815369dabe.jpg" alt=""width="300"> <span>3.5$</span></li>
+                 
+                 <p></p>
+               </td>
+               <td width="25%" bgcolor="f11f1f1">
+                 <li><img src="0868faa1730cdf57300414617f554b08.jpg" alt=""width="300"> <span>3.5$</span></li>
+                <p></p>
+                 <td width="25%" bgcolor="f11f1f1">
+                   <li><img src="804f300fcf555be631a14bf0b57a5991.jpg" alt=""width="300"> <span>4.4$</span></li>
+                   <h1>pancakes</h1>
+                   <p></p>
+                 </td>
+               </td>
+               <td width="25%" bgcolor="f11f1f1">
+                 <li><img src="4a4e7b0af1dd643d9ae1200400186437.jpg" alt=""width="300"> <span>buy10free2</span></li>
+                 
+                 <p></p>
+                 
+               </td><td width="25%" bgcolor="f11f1f1">
+                 <li><img src="6dd3f426534070096400f54cd7a8f731.jpg" alt=""width="300"> <span>2$</span></li>
+                 <p></p>
+               </td><td width="25%" bgcolor="f11f1f1">
+                 <li><img src="635d414af550be3cfa08f2dc710d9fd0.jpg" alt=""width="300"> <span>2$</span></li>
+                 
+                 <p></p>
+               </td><td width="25%" bgcolor="f11f1f1">
+                 <li><img src="a98b1ab7d5453baf47ba275808790462.jpg" alt=""width="300"> <span>3$</span></li>
+                 
+                 <p></p>
+               </td><td width="25%" bgcolor="f11f1f1">
+                 <li><img src="558bfa3f5216c6cb9d0d6a1fc0e66789.jpg" alt=""width="300"> <span>3.2$</span></li>
+                 <h1>Strawberry creanm Cakes</h1>
+                 <p></p>
+               </td>
+               <td width="25%" bgcolor="f11f1f1">
+                 <li><img src="84ff9e2805c156e1461ac50939c65aa5.jpg" alt=""width="300"> <span>4.1$</span></li>
+                 
+                 <p></p>
+                 
+               </td><td width="25%" bgcolor="f11f1f1">
+                 <li><img src="8768993d726c1720634a19e66d9f4d92.jpg" alt=""width="300"> <span>4$</span></li>
+                 
+                 <p></p>
+               </td><td width="25%" bgcolor="f11f1f1">
+                 <li><img src="68af4ff432aa8f4f2497309c0ecee6a5.jpg" alt=""width="300"> <span>4.5$</span></li>
+                 
+                 <p></p>
+               </td><td width="25%" bgcolor="f11f1f1">
+                 <li><img src="e8a8de2882dfdd49379afad32bf45192.jpg" alt=""width="300"> <span>5$</span></li>
+                 
+               </td><td width="25%" bgcolor="f11f1f1">
+                 <li><img src="c4f3ad2082807da95ec371dc3364373f.jpg" alt=""width="300"> <span>4$</span></li>
+                 <h1> Sour Cherry</h1> 
+                 
+                 <p></p>
+               </td><td width="25%" bgcolor="f11f1f1">
+                 <li><img src="47556b3c4106197dfd31eafdd4b04fa3.jpg" alt=""width="300"> <span>5.5$</span></li>
+                 
+                 <p></p>
+               </td><td width="25%" bgcolor="f11f1f1">
+                 <li><img src="46cc81a91955222658a6795edda5068c.jpg" alt=""width="300"> <span>5.8$</span></li>
+                 
+               </td>
+               <td width="25%" bgcolor="f11f1f1">
+                 <li><img src="3478848fe3dd7c51d20d60e902a92c66.jpg" alt=""width="300"> <span>6$</span></li>
+               
+               </td>
+               <td width="25%" bgcolor="f11f1f1">
+                 <li><img src="c728a4bad8c806f9d7567cf3d65ca326.jpg" alt=""width="300"> <span>5$</span></li>
+                 <h1>  Pastry</h1>
+                 <p></p>
+               </td>
+               <td width="25%" bgcolor="f11f1f1">
+                 <li><img src="25392493bfe1cf61ebcd96200467d8e4.jpg" alt=""width="300"> <span>Buy One Get One</span></li>
+                 
+               </td>
+             </td>
+             <td width="25%" bgcolor="f11f1f1">
+               <li><img src="c63c42220a62d8d4ef828aa938146a29.jpg" alt=""width="300"> <span>Buy One Get One</span></li>  
+             </td>
+           </td>
+           <td width="25%" bgcolor="f11f1f1">
+             <li><img src="ccc3f5e5b424e0a88628b598afd50fe1.jpg" alt=""width="300"> <span>Buy One Get One</span></li>
+             </td>
+               </ul>
+       </div>
+
+       <div class="tags">
+           <h1>ចង់បានឆាតចូលផេក​</h1>
+           <h3><button>Buy Now !</button></h3>
+       </div>
+   </div>
+ <h3>YOU WANNA BUY U CAN CONTACT</h3>
+   <div class="myl">
+     <img src="https://i.pinimg.com/736x/b9/7e/c2/b97ec2abe783249bcf08d021c0488f39.jpg" class="rounded-pill"alt="" />
+     <h2>
+       រាល់ការជៀវភេសជ្ជៈឬនំពីខាងហាងយើងខ្ញុំចាប់ពី១០០កែវឡើងទៅ
+       និងការជៀវនំចាប់ពី៥០០ឡើងទៅខាងយើងខ្ញុំនិងមានរង្វាន់សន្លឹកឆ្នោតផ្សងសំណាងមួយភ្លាមៗ ។
+     </h2>
+</body>
+</html>

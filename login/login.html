@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+    @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
+    * {
+      box-sizing: border-box;
+    }
+    header{
+      top:0px;
+      left:0px;
+      width:96%;
+      background:white;
+      position:fixed;
+      top:20px;
+      left:50%;
+      transform:translateX(-50%);
+      display: flex;
+      align-items:center;
+      border-radius: 20px;
+      justify-content:space-between;
+      z-index: 100;
+  }
+  .header-online{
+      top:0px;
+      width:100%;
+      border-radius:0px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  }
+  body{
+      background-color:rgb(244, 236, 236);
+      color:black;
+      font-size:1.6rem;
+      line-height:1.5;
+  }
+  header nav ul{
+      
+      display:flex;
+      align-items: center;
+      justify-content:space-between;
+      list-style:none;
+      gap:10px;
+      margin-right:10px;
+  }
+  header nav ul li a{
+      padding:10px;
+      border-radius:10px;
+      transition:0.5s;
+      color:#23cef4;
+  }
+  
+  header nav ul li a:hover{
+      background:rgb(14, 206, 254);
+      color:rgb(242, 241, 244);
+      transition: 0.5s;
+      transform: scale(1.1);
+  }
+  header nav ul li a.active{
+      background:black;
+      color:rgb(98, 0, 255);
+  }
+  header .logo{
+      color:rgb(26, 246, 246);
+      font-size:25px;
+      text-transform: capitalize;
+      margin-left:10px;
+      transition:0.5s;
+  }
+  
+  .click:hover{
+      color:rgb(16, 192, 241);
+  }
+  
+  header .click{
+      display:none;
+      font-size:20px;
+      color:rgb(18, 204, 237);
+      margin-right:20px;
+      transition:0.5s;
+  }
+  header .clicked{
+      transform: rotate(180deg);
+      opacity:1;
+  }
+  @media screen and (max-width: 736px) {
+    
+    .section_title{
+     font-size:10px;
+    }
+    header .navblock{
+     position:fixed;
+     top:50px;
+     left:-50px;
+     width:50%;
+     background:white;
+     border-radius:50px;
+     opacity:0;
+     transition:0.5s;
+      }
+      header .nav-toggle{
+        left:20px;
+        opacity:1;
+        width:40%;
+    }
+    header nav ul{
+      flex-direction:column;
+      gap:10px;
+      padding:10px;
+  }
+  header nav ul li {
+      margin:10px,0;
+      width:100%;
+      text-align:center;
+  }
+  header nav ul li a{
+     font-size:10px;
+     display:block;
+  }
+}
+  @media(max-width:768px){
+    html{
+        font-size:40%;
+    }
+    header .click{
+        display:block;
+        margin-right:10px;
+        font-size:30px;
+        color:rgb(7, 206, 241);
+    }
+    header .click:hover{
+        color:rgb(110, 32, 228);
+        transform:scale(1.5);
+    }
+    header .navblock{
+        position:fixed;
+        top:50px;
+        left:-50px;
+        width:50%;
+        background:white;
+        border-radius:50px;
+        opacity:0;
+        transition:0.5s;
+    }
+    header nav ul{
+        flex-direction:column;
+        gap:10px;
+        padding:10px;
+    }
+    header nav ul li {
+        margin:10px,0;
+        width:100%;
+        text-align:center;
+    }
+    header nav ul li a{
+       font-size:10px;
+       display:block;
+    }
+    header .nav-toggle{
+        left:20px;
+        opacity:1;
+        width:40%;
+    }
+    header nav ul li a:hover{
+        background:rgb(14, 206, 254);
+        color:rgb(242, 241, 244);
+        transition: 0.5s;
+        transform: scale(1.1);
+      
+    }
+}
+    body {
+      background: #f5f6f7;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      font-family: 'Lato', sans-serif;
+      height: 100vh;
+      margin: -20px 0 50px;
+    }
+
+    h1 {
+      font-weight: bold;
+      margin: 0;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    p {
+      font-size: 14px;
+      font-weight: 100;
+      line-height: 20px;
+      letter-spacing: 0.5px;
+      margin: 20px 0 30px;
+    }
+
+    a {
+      color: #333;
+      font-size: 12px;
+      text-decoration: none;
+      margin: 15px 0;
+    }
+
+    button {
+      border-radius: 20px;
+      border: 1px solid #ffffff;
+      background-color: #1becff;
+      color: #ffffff;
+      font-size: 12px;
+      font-weight: bold;
+      padding: 12px 45px;
+      text-transform: uppercase;
+      transition: transform 80ms ease-in;
+      margin: 10px 0;
+      cursor: pointer;
+    }
+
+    button:active {
+      transform: scale(0.95);
+    }
+
+    button:focus {
+      outline: none;
+    }
+
+    button .click {
+      background-color: transparent;
+      border-color: #ffffff solid 1px;
+      width: 150px;
+    }
+
+    .social-login {
+      margin: 2px 0;
+      width: 100%;
+    }
+
+    .social-login i {
+      border-radius: 100%;
+      color: #fff;
+      background: #cecdcd;
+      padding: 5px;
+      font-size: 9px;
+      border: 1px solid #eee;
+      margin-right: 3px;
+    }
+
+    form {
+      background-color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 0 50px;
+      height: 100%;
+      text-align: center;
+    }
+
+    input {
+      background-color: #fff;
+      border: 1px solid #cecdcd;
+      padding: 12px 15px;
+      margin: 8px 0;
+      width: 90%;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .group-input {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+
+    .group-input i {
+      background: #cecdcd;
+      padding: 8px;
+      color: #fff;
+      border-radius: 8px 0 0 8px;
+    }
+
+    .container {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+      position: relative;
+      overflow: hidden;
+      width: 768px;
+      max-width: 100%;
+      min-height: 480px;
+    }
+
+    .form-container {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      transition: all 0.6s ease-in-out;
+    }
+
+    .sign-in-container {
+      left: 0;
+      width: 50%;
+      z-index: 2;
+    }
+
+    .container.right-panel-active .sign-in-container {
+      transform: translateX(100%);
+    }
+
+    .sign-up-container {
+      left: 0;
+      width: 50%;
+      opacity: 0;
+      z-index: 1;
+    }
+
+    .container.right-panel-active .sign-up-container {
+      transform: translateX(100%);
+      opacity: 1;
+      z-index: 5;
+      animation: show 0.6s;
+    }
+
+    @keyframes show {
+      0%,
+      49.99% {
+        opacity: 0;
+        z-index: 1;
+      }
+
+      50%,
+      100% {
+        opacity: 1;
+        z-index: 5;
+      }
+    }
+
+    .side-element-container {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 50%;
+      height: 100%;
+      overflow: hidden;
+      transition: transform 0.6s ease-in-out;
+      z-index: 100;
+    }
+
+    .container.right-panel-active .side-element-container {
+      transform: translateX(-100%);
+    }
+
+    .side-element {
+      background: #1becff;
+      background: -webkit-linear-gradient(to right, #1becff, #1becff);
+      background: linear-gradient(to right, #1becff, #1becff);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 0 0;
+      color: #ffffff;
+      position: relative;
+      left: -100%;
+      height: 100%;
+      width: 200%;
+      transform: translateX(0);
+      transition: transform 0.6s ease-in-out;
+    }
+
+    .container.right-panel-active .side-element {
+      transform: translateX(50%);
+    }
+
+    .coverup {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 0 40px;
+      text-align: center;
+      top: 0;
+      height: 100%;
+      width: 50%;
+      transform: translateX(0);
+      transition: transform 0.6s ease-in-out;
+    }
+
+    .side-element-left {
+      transform: translateX(-20%);
+    }
+
+    .container.right-panel-active .side-element-left {
+      transform: translateX(0);
+    }
+
+    .side-element-right {
+      right: 0;
+      transform: translateX(0);
+    }
+
+    .container.right-panel-active .side-element-right {
+      transform: translateX(20%);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <a href="" class="logo"><i class="fa-solid fa-cart-shopping"></i>Drink</a>
+    <nav class="navblock">
+        <ul>
+            <li><a href="../index.html#back">Home</a></li>
+            <li><a href="../About Us/about.html">About Us</a></li>
+            <li><a href="../index.html#contact">Contact</a></li>
+            <li><a href="../index.html#product">Product</a></li>
+            <li><a href="login.html">Account</a></li>
+        </ul>
+    </nav>
+    <div class="click">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+</header>
+  <div class="container" id="container">
+    <div class="form-container sign-up-container">
+      <form action="#">
+        <h1>Create Account</h1>
+        <hr />
+        <div class="group-input">
+          <i class="fa fa-user"></i>
+          <input type="text" placeholder="Name" />
+        </div>
+        <div class="group-input">
+          <i class="fa fa-envelope"></i>
+          <input type="email" placeholder="Email" />
+        </div>
+        <div class="group-input">
+          <i class="fa fa-lock"></i>
+          <input type="password" placeholder="Password" />
+        </div>
+        <button>Sign Up</button>
+        <div class="social-login">
+          <a href="#"><i class="fab fa-google"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-github"></i></a>
+        </div>
+      </form>
+    </div>
+    <div class="form-container sign-in-container">
+      <form action="#">
+        <h1>Sign in</h1>
+        <hr />
+        <div class="group-input">
+          <i class="fa fa-envelope"></i>
+          <input type="email" placeholder="Email" />
+        </div>
+        <div class="group-input">
+          <i class="fa fa-lock"></i>
+          <input type="password" placeholder="Password" />
+        </div>
+        <button>Sign In</button>
+        <div class="social-login">
+          <a href="#"><i class="fab fa-google"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-github"></i></a>
+        </div>
+        <a href="#">Forgot your password?</a>
+      </form>
+    </div>
+
+    <div class="side-element-container">
+      <div class="side-element">
+        <div class="coverup side-element-left">
+          <h1>Hello!</h1>
+          <p>Play it safe with me Sopheaktra</p>
+          <button class="ghost" id="signIn">Sign In</button>
+        </div>
+        <div class="coverup side-element-right">
+          <h1>Welcome!</h1>
+          <p>
+           back my friends!
+          </p>
+          <button class="ghost" id="signUp">Sign Up</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const signUpBtn = document.getElementById('signUp');
+    const signInBtn = document.getElementById('signIn');
+    const container = document.getElementById('container');
+
+    signUpBtn.addEventListener('click', () => {
+      container.classList.add('right-panel-active');
+    });
+
+    signInBtn.addEventListener('click', () => {
+      container.classList.remove('right-panel-active');
+    });
+    $(document).ready(function(){
+      $('.click').click(function(){
+          $(this).toggleClass('.clicked');
+          $('.navblock').toggleClass('nav-toggle');
+      });
+      $(window).on('scroll', function(){
+          $('.click').removeClass('.clicked');
+          $('.navblock').removeClass('nav-toggle');
+          if($(window).scrollTop()>30){
+              $('header').addClass('header-online');
+          } else{
+              $('header').removeClass('header-online');
+          }
+      });
+    
+    });
+  </script>
+
+</body>
+
+</html>

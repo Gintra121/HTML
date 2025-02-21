@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store</title>
+    
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+    <script src="java.js"></script>
+    <script type="module">
+        import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
+
+        const swiper = new Swiper('.swiper', {
+
+            loop: true,
+            grabCursor: true,
+            slidesPerView: 'auto',
+            centeredSlides: true,
+            spaceBetween: 30,
+
+            breakpoints: {
+                768: {
+                    slidesPerView: 3, 
+                },
+                480: {
+                    slidesPerView: 2, 
+                },
+                0: {
+                    slidesPerView: 1, 
+                },
+            },
+        });
+    </script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_forward" />
+</head>
+
+<body>
+    <header>
+        <a href="" class="logo"><i class="fa-solid fa-cart-shopping"></i>Drink</a>
+        <nav class="navblock">
+            <ul>
+                <li><a href="../index.html#back">Home</a></li>
+                <li><a href="../About Us/about.html">About Us</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+                <li><a href="../index.html#product">Product</a></li>
+                <li><a href="">Account</a></li>
+            </ul>
+        </nav>
+        <div class="click">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </header>
+    <section class="back" id="back">
+        <div class="content">
+            <h1>Buy online Delivery</h1>
+            <p>Get your favorite drinks at your doorstep</p>
+            <a href="about.html" class="btn">About us</a>
+            
+            <p>
+                Hope you enjoy our works we have limitited schedule but we make it work somehow
+            </p>
+        </div> 
+        <section class="popular sigmar-regular" id="product">
+            <div class="popular_container">
+                <div class="popular_data">
+                    <h2 class="section_title">Team Members </h2>
+                    <p class="section_subtitle">Our Members who works on these</p>
+                </div>
+                <div class="popular_swiper swiper">
+                    <div class="swiper-wrapper ">
+                        <article class="swiper-slide popular_card ">
+                            <img src="photo_2024-12-23_20-13-23.jpg" alt="image" class="popular__img">
+                            <h3 class="popular__title">វណ្ណៈ សុភ័ក្តា្រ</h3>
+                            <p class="popular__price">១១១</p>
+                            <button class="popular__button"><a href="../index.html">Respective Work</a></button>
+                        </article>
+                        <article class="swiper-slide popular_card">
+                            <img src="photo_2024-12-15_07-06-30.jpg" alt="image" class="popular__img">
+                            <h3 class="popular__title">ឃន រតនសត្យា</h3>
+                            <p class="popular__price">១១១</p>
+                            <button class="popular__button"><a href="../Pizza/pizza.html">Respective Work</a></button>
+                        </article>
+                        <article class="swiper-slide popular_card">
+                            <img src="photo_2025-02-15_10-43-59.jpg" alt="image" class="popular__img">
+                            <h3 class="popular__title">នី ស៊ីដា</h3>
+                            <p class="popular__price">១១១</p>
+                            <button class="popular__button"><a href="../juice/juice.html">Respective Work</a></button>
+                        </article>
+                        <article class="swiper-slide popular_card">
+                            <img src="photo_2024-09-21_09-45-40.jpg" alt="image" class="popular__img">
+                            <h3 class="popular__title">ឆែម ម៉ីហា</h3>
+                            <p class="popular__price">$9.99</p>
+                            <button class="popular__button"><a href="../">Respective Work</a></button>
+                        </article>
+                        </article>
+                        <article class="swiper-slide popular_card">
+                            <img src="photo_2024-02-01_19-01-51.jpg" alt="image" class="popular__img">
+                            <h3 class="popular__title">គុង​ ហេង</h3>
+                            <p class="popular__price"></p>
+                            <button class="popular__button"><a href="../coffee/index.html">Respective Work</a></button>
+                        </article>
+                    </div>
+                  
+                    <div class="swiper-pagination"></div>
+                </div>
+            </section>
+    </section>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <h3>About Us</h3>
+                <p>We are a team of students who are passionate about web development. We are trying to make a website
+                    that can help people to buy drinks online. We are trying to make a website that can help people to
+                    buy drinks online.</p>
+            </div>
+            <div class="footer-content">
+                <h3>Contact Us</h3>
+                <p>Email:             </div>
+            <div class="footer-content">
+                <h3>Contact Us</h3>
+                <p>Email: EMAIL</p>
+                <p>Phone: +123 456 7890</p>
+            </div>
+            <div class="footer-content">
+                <h3>Follow Us</h3>
+            </div> 
+    </footer>
+</body>
+<script>
+    $(document).ready(function(){
+        $('.click').click(function(){
+            $(this).toggleClass('.clicked');
+            $('.navblock').toggleClass('nav-toggle');
+        });
+        $(window).on('scroll', function(){
+            $('.click').removeClass('.clicked');
+            $('.navblock').removeClass('nav-toggle');
+            if($(window).scrollTop()>30){
+                $('header').addClass('header-online');
+            } else{
+                $('header').removeClass('header-online');
+            }
+        });
+      
+      });
+</script>
+</html>

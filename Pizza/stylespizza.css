@@ -3,6 +3,168 @@
   margin:0px;
   box-sizing: border-box;
  }
+ header{
+  top:0px;
+  left:0px;
+  width:96%;
+  background:white;
+  position:fixed;
+  top:20px;
+  left:50%;
+  transform:translateX(-50%);
+  display: flex;
+  align-items:center;
+  border-radius: 20px;
+  justify-content:space-between;
+  z-index: 100;
+}
+.header-online{
+  top:0px;
+  width:100%;
+  border-radius:0px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+body{
+  background-color:rgb(244, 236, 236);
+  color:black;
+  font-size:1.6rem;
+  line-height:1.5;
+}
+header nav ul{
+  
+  display:flex;
+  align-items: center;
+  justify-content:space-between;
+  list-style:none;
+  gap:10px;
+  margin-right:10px;
+}
+header nav ul li a{
+  padding:10px;
+  border-radius:10px;
+  transition:0.5s;
+  color:#23cef4;
+}
+
+header nav ul li a:hover{
+  background:rgb(14, 206, 254);
+  color:rgb(242, 241, 244);
+  transition: 0.5s;
+  transform: scale(1.1);
+}
+header nav ul li a.active{
+  background:black;
+  color:rgb(98, 0, 255);
+}
+header .logo{
+  color:rgb(26, 246, 246);
+  font-size:25px;
+  text-transform: capitalize;
+  margin-left:10px;
+  transition:0.5s;
+}
+
+.click:hover{
+  color:rgb(16, 192, 241);
+}
+
+header .click{
+  display:none;
+  font-size:20px;
+  color:rgb(18, 204, 237);
+  margin-right:20px;
+  transition:0.5s;
+}
+header .clicked{
+  transform: rotate(180deg);
+  opacity:1;
+}
+@media screen and (max-width: 736px) {
+
+.section_title{
+ font-size:10px;
+}
+header .navblock{
+ position:fixed;
+ top:50px;
+ left:-50px;
+ width:50%;
+ background:white;
+ border-radius:50px;
+ opacity:0;
+ transition:0.5s;
+  }
+  header .nav-toggle{
+    left:20px;
+    opacity:1;
+    width:40%;
+}
+header nav ul{
+  flex-direction:column;
+  gap:10px;
+  padding:10px;
+}
+header nav ul li {
+  margin:10px,0;
+  width:100%;
+  text-align:center;
+}
+header nav ul li a{
+ font-size:10px;
+ display:block;
+}
+}
+@media(max-width:768px){
+html{
+    font-size:40%;
+}
+header .click{
+    display:block;
+    margin-right:10px;
+    font-size:30px;
+    color:rgb(7, 206, 241);
+}
+header .click:hover{
+    color:rgb(110, 32, 228);
+    transform:scale(1.5);
+}
+header .navblock{
+    position:fixed;
+    top:50px;
+    left:-50px;
+    width:50%;
+    background:white;
+    border-radius:50px;
+    opacity:0;
+    transition:0.5s;
+}
+header nav ul{
+    flex-direction:column;
+    gap:10px;
+    padding:10px;
+}
+header nav ul li {
+    margin:10px,0;
+    width:100%;
+    text-align:center;
+}
+header nav ul li a{
+   font-size:10px;
+   display:block;
+}
+header .nav-toggle{
+    left:20px;
+    opacity:1;
+    width:40%;
+}
+header nav ul li a:hover{
+    background:rgb(14, 206, 254);
+    color:rgb(242, 241, 244);
+    transition: 0.5s;
+    transform: scale(1.1);
+  
+}
+}
 .menu {
   /* position: fixed;
   z-index:1000; */
